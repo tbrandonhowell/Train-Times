@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Timer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" /> -->
+</head>
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1>Train Timer</h1>
+            <h3>Subheading</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Current Train Schedule</h2>
+                <table class="table table-striped">
+                    <th>
+                        <td>Train Name</td>
+                        <td>Destination</td>
+                        <td>Frequency (min)</td>
+                        <td>Next Arrival</td>
+                        <td>Minutes Away</td>
+                    </th>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Add Train</h2>
+                <form>
+                    <div class="form-group">
+
+                        <label for="trainNameInput">Train Name</label>
+                        <input type="text" class="form-control" id="trainNameInput" aria-describedby="trainName" placeholder="">
+                    
+                        <label for="destinationInput">Destination</label>
+                        <input type="text" class="form-control" id="destinationInput" aria-describedby="destination" placeholder="">
+                    
+                        <label for="firstTrainInput">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="firstTrainInput" aria-describedby="firstTrain" placeholder="">
+                    
+                        <label for="frequencyInput">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequencyInput" aria-describedby="frequency" placeholder="">
+                    
+                        <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div> <!-- close container div -->
+
+    <script>
+        // TODO: connect to database
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
