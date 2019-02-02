@@ -3,39 +3,44 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Train Timer</title>
+    <title>Trainspotting</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/css.css" />
 </head>
 <body>
     <div class="container">
 
-        <div class="jumbotron text-center">
-            <h1>Train Timer</h1>
-            <h3>Subheading</h3>
-        </div>
+        <div class="row">
+                <div class="col-md-12 p-0">
+                    <img src="assets/images/trainspotting.jpg" class="img-fluid">
+                    <h1>Trainspotting</h1>
+                </div>
+            </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 border mt-3">
                 <h2>Current Train Schedule</h2>
-                <table class="table table-striped">
-                    <th>
-                        <td>Train Name</td>
-                        <td>Destination</td>
-                        <td>Frequency (min)</td>
-                        <td>Next Arrival</td>
-                        <td>Minutes Away</td>
-                    </th>
+                <table class="table table-striped" id="trainTable">
+                    <tr>
+                        <td><strong>Train Name</strong></td>
+                        <td><strong>Destination</strong></td>
+                        <td><strong>First Train of the Day</strong></td>
+                        <td><strong>Frequency (min)</strong></td>
+                        <td><strong>Next Arrival</strong></td>
+                        <td><strong>Minutes Away</strong></td>
+                    </tr>
                 </table>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 border mt-3">
                 <h2>Add Train</h2>
                 <form>
                     <div class="form-group">
+
+                        <form id="addTrain">
 
                         <label for="trainNameInput">Train Name</label>
                         <input type="text" class="form-control" id="trainNameInput" aria-describedby="trainName" placeholder="">
@@ -51,6 +56,8 @@
                     
                         <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
 
+                        </form>
+
                     </div>
                 </form>
             </div>
@@ -58,13 +65,24 @@
 
     </div> <!-- close container div -->
 
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     <script>
-        // TODO: connect to database
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBzg9OIB5ug53H8bsfehJNClXgUJp0pK20",
+        authDomain: "trainspotting-ae196.firebaseapp.com",
+        databaseURL: "https://trainspotting-ae196.firebaseio.com",
+        projectId: "trainspotting-ae196",
+        storageBucket: "trainspotting-ae196.appspot.com",
+        messagingSenderId: "588353632409"
+    };
+    firebase.initializeApp(config);
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
+
 
 </body>
 </html>
